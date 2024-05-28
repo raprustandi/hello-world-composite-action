@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+    name: Say Hello
+    steps:
+      - uses: actions/checkout@v4
+      - id: foo
+        uses: raprustandi/hello-world-composite-action@v1
+        with:
+          who-to-greet:
+            'hello'
